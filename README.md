@@ -43,18 +43,8 @@ $ c file > file
 
 ## Installation
 
-### Quick Install
-```bash
-$ wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
-```
-
-### OSX
-```bash
-$ brew install rettier/tap/c
-```
-
 ### Linux
-Download the latest [release](https://github.com/rettier/c/releases/latest) from github. For debian based systems a deb file is available.
+Download the latest [release](https://github.com/boxmein-forks/c/releases/latest) from github. For debian based systems a deb file is available.
 
 
 
@@ -85,7 +75,7 @@ If setup, c can also send/retrieve the data from a remote server, instead of you
 
 Start a local server and set the appropriate environment variable
 ```bash
-$ docker run --rm -d --name c-server -p 8000:80 -e STORAGE_BACKEND=file -e STORAGE_PATH=/tmp rettier/c-server
+$ docker run --rm -d --name c-server -p 8000:80 -e STORAGE_BACKEND=file -e STORAGE_PATH=/tmp ghcr.io/boxmein-forks/c-server
 # to clean up after the tutorial run $ docker stop c-server
 
 # fish
@@ -147,11 +137,11 @@ an additional macro is provided to copy the full path of the specified file/fold
 ```bash
 # copy the fullpath of the current path into your local clipboard
 $ cf .
-/Users/reitph/Development/c/docker
+/Users/boxmein/Development/c/docker
 
 # stores the same path on the remote server named path
 $ cf . path
-/Users/reitph/Development/c/docker
+/Users/boxmein/Development/c/docker
 ```
 
 to get the remote data into your local clipboard
