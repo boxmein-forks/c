@@ -134,7 +134,7 @@ main(){
     else
         echo "No clipboard command found (supports pbcopy, xclip, xsel)"
         echo "If you want to add support for your faviourite clipboard command"
-        echo "please open a pull request at https://github.com/rettier/c"
+        echo "please open a pull request at https://github.com/boxmein-forks/c"
         exit 1;
     fi
 

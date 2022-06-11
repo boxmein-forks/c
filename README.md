@@ -43,10 +43,26 @@ $ c file > file
 
 ## Installation
 
-### Linux
-Download the latest [release](https://github.com/boxmein-forks/c/releases/latest) from github. For debian based systems a deb file is available.
+Install into ~/.local/bin: (just for me)
 
+```bash
+wget -qO ~/.local/bin/c https://raw.githubusercontent.com/boxmein-forks/c/master/c 
+chmod +x ~/.local/bin/c
+```
 
+Install into /usr/local/bin: (full-system install)
+
+```bash
+wget -qO /usr/local/bin/c https://raw.githubusercontent.com/boxmein-forks/c/master/c 
+chmod +x /usr/local/bin/c
+```
+
+Install into /sbin: (worst place to put this script)
+
+```bash
+wget -qO /sbin/c https://raw.githubusercontent.com/boxmein-forks/c/master/c 
+chmod +x /sbin/c
+```
 
 ## Local Usage
 
@@ -65,8 +81,6 @@ Hello C
 $ c | wc -w
 2
 ```
-
-
 
 ## Remote Usage
 
