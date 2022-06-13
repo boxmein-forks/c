@@ -1,10 +1,13 @@
-FROM python:3.7-alpine
+FROM python:3.10
+WORKDIR /app
+RUN ["pip", "install", "--no-cache-dir", "poetry"]
 
-# install base requirements
-RUN pip install --no-cache-dir flask environs gunicorn
+COPY ./pyproject.toml /app/pyproject.toml
+COPY ./poetry.lock /app/poetry.lock
+RUN ["poetry", "config", "virtualenvs.create", "false"]
+RUN ["poetry", "install", "--no-root"]
 
 ADD src/ /app
-WORKDIR /app
 CMD ["gunicorn", "main:app", "-w", "4", "--threads", "12", "--bind", "0.0.0.0:80"]
 
 # documentation

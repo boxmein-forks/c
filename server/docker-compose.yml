@@ -2,15 +2,17 @@ version: '2.0'
 services:
     c:
         restart: always
-        image: rettier/c-server
+        build: '.'
+        image: boxmein-forks/c-server
         ports:
-            - 8099:8099
+            - 8099:80
         environment:
-            HOST: 0.0.0.0
-            PORT: 8099
+            HOST: '0.0.0.0'
+            PORT: '80'
             STORAGE_BACKEND: file
             STORAGE_PATH: /data
         volumes:
-            - ./data:/data
+            - data:/data
 
-
+volumes:
+    data:
