@@ -163,7 +163,6 @@ to get the remote data into your local clipboard
 $ c test | c
 ```
 
-
 to paste from your local clipboard to the remote 
 ```bash
 $ c | c test
